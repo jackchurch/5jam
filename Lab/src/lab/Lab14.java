@@ -6,6 +6,7 @@
 package lab;
 
 import comparatorSorting.*;
+import searchingAlgorithms.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -19,7 +20,8 @@ import java.util.TreeSet;
  *
  * @author 000080409
  */
-public class Lab14 {
+public class Lab14
+{
 
     /**
      * @param args the command line arguments
@@ -157,32 +159,32 @@ public class Lab14 {
         studentArrayList.add(s6);
 
         System.out.println("\n\nStudents Array before sorting: ");
-        studentArrayList.forEach((s) ->
-        {
+        studentArrayList.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
         //BY ID
         System.out.println("\n\nStudents Array by ID:");
         Collections.sort(studentArrayList, new SortStudentById());
-        studentArrayList.forEach((s) ->
-        {
+        studentArrayList.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
         //BY DATE REGISTERED REVERSE ORDER
         Collections.sort(studentArrayList, new SortStudentByDateRegistered().reversed());
         System.out.println("\n\nStudents Array by Newsest Date Registered: ");
-        studentArrayList.forEach((s) ->
-        {
+        studentArrayList.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
         //BY NAME
         Collections.sort(studentArrayList, new SortStudentByName());
         System.out.println("\n\nStudents Array by name from inherited from person class:");
-        studentArrayList.forEach((s) ->
-        {
+        studentArrayList.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
@@ -197,8 +199,8 @@ public class Lab14 {
         studentSet.add(s6);
 
         System.out.println("\n\nStudents Set before sorting: ");
-        studentSet.forEach((s) ->
-        {
+        studentSet.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
@@ -212,8 +214,8 @@ public class Lab14 {
         studentByNameTreeSet.add(s5);
         studentByNameTreeSet.add(s6);
 
-        studentByNameTreeSet.forEach((s) ->
-        {
+        studentByNameTreeSet.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
@@ -227,8 +229,8 @@ public class Lab14 {
         studentByDateRegisteredTreeSet.add(s5);
         studentByDateRegisteredTreeSet.add(s6);
 
-        studentByDateRegisteredTreeSet.forEach((s) ->
-        {
+        studentByDateRegisteredTreeSet.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
@@ -242,8 +244,8 @@ public class Lab14 {
         studentByIdTreeSet.add(s5);
         studentByIdTreeSet.add(s6);
 
-        studentByIdTreeSet.forEach((s) ->
-        {
+        studentByIdTreeSet.forEach((s)
+                -> {
             System.out.println(s.toString() + " " + s.name);
         });
 
@@ -266,8 +268,8 @@ public class Lab14 {
         enrollmentArrayList.add(s6.enrollment);
 
         System.out.println("\n\nEnrollmentArray before sorting: ");
-        enrollmentArrayList.forEach((e) ->
-        {//
+        enrollmentArrayList.forEach((e)
+                -> {//
             System.out.println(e.toString());
         });
 
@@ -275,8 +277,8 @@ public class Lab14 {
         System.out.println("\n\nEnrollmentArray Array by ID:");
         Collections.sort(enrollmentArrayList, new SortEnrollmentById());
 
-        enrollmentArrayList.forEach((e) ->
-        {
+        enrollmentArrayList.forEach((e)
+                -> {
             System.out.println(e.toString());
         });
 
@@ -284,8 +286,8 @@ public class Lab14 {
         System.out.println("\n\nEnrollmentArray Array by date:");
         Collections.sort(enrollmentArrayList, new SortEnrollmentByDateEnrolled());
 
-        enrollmentArrayList.forEach((e) ->
-        {
+        enrollmentArrayList.forEach((e)
+                -> {
             System.out.println(e.toString());
         });
 
@@ -300,8 +302,8 @@ public class Lab14 {
         enrollmentSet.add(s6.enrollment);
 
         System.out.println("\n\nEnrollment Set before sorting: ");
-        enrollmentSet.forEach((e) ->
-        {
+        enrollmentSet.forEach((e)
+                -> {
             System.out.println(e.toString());
         });
 
@@ -315,8 +317,8 @@ public class Lab14 {
         enrollmentByDateEnrolledTreeSet.add(s5.enrollment);
         enrollmentByDateEnrolledTreeSet.add(s6.enrollment);
 
-        enrollmentByDateEnrolledTreeSet.forEach((e) ->
-        {
+        enrollmentByDateEnrolledTreeSet.forEach((e)
+                -> {
             System.out.println(e.toString());
         });
 
@@ -330,8 +332,8 @@ public class Lab14 {
         enrollmentByDateIdTreeSet.add(s5.enrollment);
         enrollmentByDateIdTreeSet.add(s6.enrollment);
 
-        enrollmentByDateIdTreeSet.forEach((e) ->
-        {
+        enrollmentByDateIdTreeSet.forEach((e)
+                -> {
             System.out.println(e.toString());
         });
 
@@ -351,24 +353,24 @@ public class Lab14 {
         courseArrayList.add(c3);
 
         System.out.println("\n\nCourse Array before sorting: ");
-        courseArrayList.forEach((c) ->
-        {
+        courseArrayList.forEach((c)
+                -> {
             System.out.println(c.toString());
         });
 
         //BY ID
         System.out.println("\n\nCourse Array by code:");
         Collections.sort(courseArrayList, new SortCourseByCode());
-        courseArrayList.forEach((c) ->
-        {
+        courseArrayList.forEach((c)
+                -> {
             System.out.println(c.toString());
         });
 
         //BY DateEnrolled
         System.out.println("\n\nCourse Array by cost:");
         Collections.sort(courseArrayList, new SortCourseByCost());
-        courseArrayList.forEach((c) ->
-        {
+        courseArrayList.forEach((c)
+                -> {
             System.out.println(c.toString());
         });
 
@@ -380,8 +382,8 @@ public class Lab14 {
         courseSet.add(c3);
 
         System.out.println("\n\nCourse Set before sorting: ");
-        courseSet.forEach((c) ->
-        {
+        courseSet.forEach((c)
+                -> {
             System.out.println(c.toString());
         });
 
@@ -392,8 +394,8 @@ public class Lab14 {
         courseByCodeTreeSet.add(c2);
         courseByCodeTreeSet.add(c3);
 
-        courseByCodeTreeSet.forEach((c) ->
-        {
+        courseByCodeTreeSet.forEach((c)
+                -> {
             System.out.println(c.toString());
         });
 
@@ -404,8 +406,8 @@ public class Lab14 {
         courseByCostTreeSet.add(c2);
         courseByCostTreeSet.add(c3);
 
-        courseByCostTreeSet.forEach((c) ->
-        {
+        courseByCostTreeSet.forEach((c)
+                -> {
             System.out.println(c.toString());
         });
 
