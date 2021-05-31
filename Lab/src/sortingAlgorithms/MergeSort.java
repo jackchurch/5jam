@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package searchingAlgorithms;
+package sortingAlgorithms;
 
 import lab.Student;
 
@@ -17,6 +17,7 @@ public class MergeSort
     public static void studentSort(Student[] a, int n)
     {
         //IF array length is 1 then return only item, array[0]
+        //SECOND ROUND OF L: n=3
         if (n < 2) 
         {
             return;
@@ -29,6 +30,7 @@ public class MergeSort
         //l array is studnet array starting from mid point (3). 
         //r array is studnet array starting from...
         //student array length(6) - mid(3), 3. 
+
         Student[] l = new Student[mid];
         Student[] r = new Student[n - mid];
         
@@ -63,7 +65,7 @@ public class MergeSort
         //the length is 'a' - mid, 6-3 - 3
         studentSort(r, n-mid);
         //This will result in the mid being 1 for each array. 
-        //https://youtu.be/Zcq_xLi2NGo
+
         
         //Now it's split, we merge them back. 
         mergeStudent(a, l, r, mid, n - mid);

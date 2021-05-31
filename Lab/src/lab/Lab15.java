@@ -19,10 +19,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
-import searchingAlgorithms.BubbleSort;
+import sortingAlgorithms.BubbleSort;
 import searchingAlgorithms.LinearSearch;
-import searchingAlgorithms.MergeSort;
-import searchingAlgorithms.SelectionSort;
+import sortingAlgorithms.MergeSort;
+import sortingAlgorithms.SelectionSort;
 
 /**
  *
@@ -68,7 +68,7 @@ public class Lab15
         //Made a studentSort and enrollment: Student-------------------------------|  Enrollment-----------------------------------------------|  Person----------------------------------------| Address--------------------------------------------------------------|
         Student s6 = new Student("Island Security", LocalDate.parse("1975-03-24"), new Enrollment(5, LocalDate.parse("1941-12-29"), "B", "1", c3), 85, "Anton Rodgers", "unknown email", "+85", new Address("44", "Sky Avenue", "The Village", "0000", "The Island"));
 
-        
+        List studentList = new ArrayList<>();
 
         Student[] studentArray = {s1, s2, s3, s4, s5, s6};
 

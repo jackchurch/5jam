@@ -5,6 +5,8 @@
  */
 package searchingAlgorithms;
 
+import lab.Course;
+import lab.Enrollment;
 import lab.Student;
 
 /**
@@ -14,7 +16,7 @@ import lab.Student;
 public class LinearSearch
 {
 
-    public static <E extends Comparable<E>> Integer linearSearch(E[] genericArray, E key)
+    public static <E extends Comparable<E>> Integer LinearSearch(E[] genericArray, E key)
     {
         for (int i = 0; i < genericArray.length; i++) {
             if (genericArray[i].equals(key)) {
@@ -24,11 +26,30 @@ public class LinearSearch
         return -1;
     }
 
-        
     public static int LinearSearchStudent(Student arr[], int key)
     {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].studentId == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static int LinearSearchEnrollment(Enrollment arr[], int key)
+    {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].enrollmentId == key) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static int LinearSearchCourse(Course arr[], int key)
+    {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].courseCode == key) {
                 return i;
             }
         }
