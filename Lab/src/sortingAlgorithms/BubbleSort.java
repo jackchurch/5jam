@@ -5,6 +5,7 @@
  */
 package sortingAlgorithms;
 
+import java.util.List;
 import lab.Course;
 import lab.Enrollment;
 import lab.Student;
@@ -33,57 +34,118 @@ public class BubbleSort
 //        }
 //    }
 
-    public static void bubbleSortStudent(Student[] array)
+//    public static void bubbleSortStudent(Student[] array)
+//    {
+//        Student s;
+//        for (int j = 0; j <= array.length - 2; j++)
+//        {
+//            for (int i = 0; i <= array.length - 2; i++)
+//            {
+//                if(array[i].studentId > array[i + 1].studentId)
+//                {
+//                    s = array[i + 1];
+//                    array[i + 1] = array[i];
+//                    array[i] = s;
+//                }
+//            }
+//        }
+//    }
+//    
+//    public static void bubbleSortCourse(Course[] array)
+//    {
+//        Course c;
+//        for (int j = 0; j <= array.length - 2; j++)
+//        {
+//            for (int i = 0; i <= array.length - 2; i++)
+//            {
+//                if (array[i].courseCode > array[i + 1].courseCode)
+//                {
+//                    c = array[i + 1];
+//                    array[i + 1] = array[i];
+//                    array[i] = c;
+//                }
+//            }
+//        }
+//    }
+//
+//    public static void bubbleSortEnrollment(Enrollment[] array)
+//    {
+//        Enrollment e;
+//        for (int j = 0; j <= array.length - 2; j++)
+//        {
+//            for (int i = 0; i <= array.length - 2; i++)
+//            {
+//                if (array[i].enrollmentId > array[i + 1].enrollmentId);
+//                {
+//                    e = array[i + 1];
+//                    array[i + 1] = array[i];
+//                    array[i] = e;
+//                }
+//            }
+//        }
+//    }
+    public static void bubbleSortStudent(List<Student> list)
     {
-        Student s;
-        for (int j = 0; j <= array.length - 2; j++)
+        Student temp;
+        boolean sorted = false;
+
+        while (!sorted)
         {
-            for (int i = 0; i <= array.length - 2; i++)
+            sorted = true;
+            for (int i = 0; i < list.size() - 1; i++)
             {
-                if(array[i].studentId > array[i + 1].studentId)
+                if (list.get(i).studentId > (list.get(i + 1).studentId))
                 {
-                    s = array[i + 1];
-                    array[i + 1] = array[i];
-                    array[i] = s;
+                    temp = list.get(i);
+                    list.set(i, list.get(i + 1));
+                    list.set(i + 1, temp);
+                    sorted = false;
                 }
             }
         }
     }
 
- public static void bubbleSortCourse(Course[] array)
+    public static void bubbleSortEnrollment(List<Enrollment> list)
     {
-        Course c;
-        for (int j = 0; j <= array.length - 2; j++)
+        Enrollment temp;
+        boolean sorted = false;
+
+        while (!sorted)
         {
-            for (int i = 0; i <= array.length - 2; i++)
+            sorted = true;
+            for (int i = 0; i < list.size() - 1; i++)
             {
-                if(array[i].courseCode > array[i + 1].courseCode)
+                if (list.get(i).enrollmentId > (list.get(i + 1).enrollmentId))
                 {
-                    c = array[i + 1];
-                    array[i + 1] = array[i];
-                    array[i] = c;
+                    temp = list.get(i);
+                    list.set(i, list.get(i + 1));
+                    list.set(i + 1, temp);
+                    sorted = false;
                 }
             }
         }
-    }
- 
- 
-  public static void bubbleSortEnrollment(Enrollment[] array)
-    {
-        Enrollment e;
-        for (int j = 0; j <= array.length - 2; j++)
-        {
-            for (int i = 0; i <= array.length - 2; i++)
-            {
-                if(array[i].enrollmentId> array[i + 1].enrollmentId);
-                {
-                    e = array[i + 1];
-                    array[i + 1] = array[i];
-                    array[i] = e;
-                }
-            }
-        }
+
     }
 
+    public static void bubbleSortCourse(List<Course> list)
+    {
+        Course temp;
+        boolean sorted = false;
+
+        while (!sorted)
+        {
+            sorted = true;
+            for (int i = 0; i < list.size() - 1; i++)
+            {
+                if (list.get(i).courseCode > (list.get(i + 1).courseCode))
+                {
+                    temp = list.get(i);
+                    list.set(i, list.get(i + 1));
+                    list.set(i + 1, temp);
+                    sorted = false;
+                }
+            }
+        }
+    }
 
 }

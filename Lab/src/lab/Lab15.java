@@ -68,35 +68,43 @@ public class Lab15
         //Made a studentSort and enrollment: Student-------------------------------|  Enrollment-----------------------------------------------|  Person----------------------------------------| Address--------------------------------------------------------------|
         Student s6 = new Student("Island Security", LocalDate.parse("1975-03-24"), new Enrollment(5, LocalDate.parse("1941-12-29"), "B", "1", c3), 85, "Anton Rodgers", "unknown email", "+85", new Address("44", "Sky Avenue", "The Village", "0000", "The Island"));
 
-        List studentList = new ArrayList<>();
-
-        Student[] studentArray = {s1, s2, s3, s4, s5, s6};
 
 
-
+        List<Student>studentArrayList = new ArrayList<>();
+        studentArrayList.add(s1);
+        studentArrayList.add(s2);
+        studentArrayList.add(s3);
+        studentArrayList.add(s4);
+        studentArrayList.add(s5);
+        studentArrayList.add(s6);
+        
         //LINEAR SEARCH
-        System.out.println("Student s1 ID " + s1.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArray, s1.studentId));
-        System.out.println("Student s2 ID " + s2.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArray, s2.studentId));
-        System.out.println("Student s3 ID " + s3.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArray, s3.studentId));
-        System.out.println("Student s4 ID " + s4.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArray, s4.studentId));
-        System.out.println("Student s5 ID " + s5.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArray, s5.studentId));
-        System.out.println("Student s6 ID " + s6.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArray, s6.studentId));
+        System.out.println("Student s1 ID " + s1.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s1.studentId));
+        System.out.println("Student s2 ID " + s2.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s2.studentId));
+        System.out.println("Student s3 ID " + s3.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s3.studentId));
+        System.out.println("Student s4 ID " + s4.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s4.studentId));
+        System.out.println("Student s5 ID " + s5.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s5.studentId));
+        System.out.println("Student s6 ID " + s6.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s6.studentId));
 
         
+        
+        
+        
+        
         //BUBBLE SORT
-        Student[] bubbleSortStudentArray = studentArray.clone();
+        List<Student> bubbleSortStudentArrayList = new ArrayList<>(studentArrayList);
         
         
         System.out.println("\n\n Before bubble sort: ");        
-        for(Student s : bubbleSortStudentArray) 
+        for(Student s : bubbleSortStudentArrayList) 
         {
             System.out.println(s.toString() + " " + s.name);
         }
 
-        BubbleSort.bubbleSortStudent(bubbleSortStudentArray);
+        BubbleSort.bubbleSortStudent(bubbleSortStudentArrayList);
         
         System.out.println("\n\n After bubble sort: ");        
-        for(Student s : bubbleSortStudentArray) 
+        for(Student s : bubbleSortStudentArrayList) 
         {
             System.out.println(s.toString() + " " + s.name);
         }
@@ -104,35 +112,34 @@ public class Lab15
         
         
         //SELECTION SORT
-        Student[] selectionSortStudentArray = studentArray.clone();
+        List<Student> selectionSortStudentArrayList = new ArrayList<>(studentArrayList);
         System.out.println("\n\n Before selection sort: ");        
-        for(Student s : selectionSortStudentArray) 
+        for(Student s : selectionSortStudentArrayList) 
         {
             System.out.println(s.toString() + " " + s.name);
         }
 
-        SelectionSort.student(selectionSortStudentArray);
+        SelectionSort.student(selectionSortStudentArrayList);
         
         System.out.println("\n\n After selection sort: ");        
-        for(Student s : selectionSortStudentArray) 
+        for(Student s : selectionSortStudentArrayList) 
         {
             System.out.println(s.toString() + " " + s.name);
         }        
-        
-        
+
         
         //MERGE SORT
-        Student[] mergeSortStudentArray = studentArray.clone();
+        List<Student> mergeSortStudentArrayList = new ArrayList<>(studentArrayList);
         System.out.println("\n\n Before merge sort: ");        
-        for(Student s : mergeSortStudentArray) 
+        for(Student s : mergeSortStudentArrayList) 
         {
             System.out.println(s.toString() + " " + s.name);
         }
-
-        MergeSort.studentSort(mergeSortStudentArray, studentArray.length);
+        
+        MergeSort.studentSort(mergeSortStudentArrayList, mergeSortStudentArrayList.size());
         
         System.out.println("\n\n After merge sort: ");        
-        for(Student s : mergeSortStudentArray) 
+        for(Student s : mergeSortStudentArrayList) 
         {
             System.out.println(s.toString() + " " + s.name);
         }        
