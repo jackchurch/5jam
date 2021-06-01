@@ -228,7 +228,7 @@ public class MergeSort
         //one less than mid point. ie copy a[0], a[1], a[2]. But not a[3]. 
         for (int i = 0; i < mid; i++) 
         {
-            l.set(i, list.get(i));
+            l.add(i, list.get(i));
         }
         
         //For each item in 'a' array, copy to 'r' array from... 
@@ -236,7 +236,7 @@ public class MergeSort
         //i.e. it is the last half of array 'a' but backwards. 
         for (int i = mid; i < size; i++)
         {
-            r.set(i-mid, list.get(i));
+            r.add(i-mid, list.get(i));
         }
         
         /*
@@ -320,7 +320,7 @@ public class MergeSort
         //one less than mid point. ie copy a[0], a[1], a[2]. But not a[3]. 
         for (int i = 0; i < mid; i++) 
         {
-            l.set(i, list.get(i));
+            l.add(i, list.get(i));
         }
         
         //For each item in 'a' array, copy to 'r' array from... 
@@ -328,7 +328,7 @@ public class MergeSort
         //i.e. it is the last half of array 'a' but backwards. 
         for (int i = mid; i < size; i++)
         {
-            r.set(i-mid, list.get(i));
+            r.add(i-mid, list.get(i));
         }
         
         /*
@@ -370,15 +370,20 @@ public class MergeSort
             }            
         }
         
+        System.out.println("hi");
+        
         while (i < left) 
         {
             list.set(k++, l.get(i++));
         }
-        
+                System.out.println("hi");
+
         while (j < right) 
         {            
             list.set(k++, r.get(j++));
         }
+                System.out.println("hi");
+
     }   
     
     //COURSE ↑↑↑↑↑ COURSE ↑↑↑↑↑ COURSE ↑↑↑↑↑ COURSE ↑↑↑↑↑ COURSE ↑↑↑↑↑ 

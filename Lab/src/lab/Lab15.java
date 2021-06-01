@@ -19,6 +19,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import searchingAlgorithms.BinarySearch;
 import sortingAlgorithms.BubbleSort;
 import searchingAlgorithms.LinearSearch;
 import sortingAlgorithms.MergeSort;
@@ -68,17 +69,248 @@ public class Lab15
         //Made a studentSort and enrollment: Student-------------------------------|  Enrollment-----------------------------------------------|  Person----------------------------------------| Address--------------------------------------------------------------|
         Student s6 = new Student("Island Security", LocalDate.parse("1975-03-24"), new Enrollment(5, LocalDate.parse("1941-12-29"), "B", "1", c3), 85, "Anton Rodgers", "unknown email", "+85", new Address("44", "Sky Avenue", "The Village", "0000", "The Island"));
 
-
-
-        List<Student>studentArrayList = new ArrayList<>();
+        List<Student> studentArrayList = new ArrayList<>();
         studentArrayList.add(s1);
         studentArrayList.add(s2);
         studentArrayList.add(s3);
         studentArrayList.add(s4);
         studentArrayList.add(s5);
         studentArrayList.add(s6);
+
+        List<Enrollment> enrollmentArrayList = new ArrayList<>();
+        enrollmentArrayList.add(s1.enrollment);
+        enrollmentArrayList.add(s2.enrollment);
+        enrollmentArrayList.add(s3.enrollment);
+        enrollmentArrayList.add(s4.enrollment);
+        enrollmentArrayList.add(s5.enrollment);
+        enrollmentArrayList.add(s6.enrollment);
+
+        List<Course> courseArrayList = new ArrayList<>();
+        courseArrayList.add(c2);
+        courseArrayList.add(c1);
+        courseArrayList.add(c3);
+
+        System.out.println("\n\nPART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n");
+
+        //BUBBLE SORT
+        List<Student> bubbleSortStudentArrayList = new ArrayList<>(studentArrayList);
+
+        System.out.println("\n\n Before Student bubble sort: ");
+        for (Student s : bubbleSortStudentArrayList)
+        {
+            System.out.println(s.toString() + " " + s.name);
+        }
+
+        BubbleSort.bubbleSortStudent(bubbleSortStudentArrayList);
+
+        System.out.println("\n\n After Student bubble sort: ");
+        for (Student s : bubbleSortStudentArrayList)
+        {
+            System.out.println(s.toString() + " " + s.name);
+        }
+
+        //SELECTION SORT
+        List<Student> selectionSortStudentArrayList = new ArrayList<>(studentArrayList);
+        System.out.println("\n\n Before Student selection sort: ");
+        for (Student s : selectionSortStudentArrayList)
+        {
+            System.out.println(s.toString() + " " + s.name);
+        }
+
+        SelectionSort.student(selectionSortStudentArrayList);
+
+        System.out.println("\n\n After Student selection sort: ");
+        for (Student s : selectionSortStudentArrayList)
+        {
+            System.out.println(s.toString() + " " + s.name);
+        }
+
+        //MERGE SORT
+        List<Student> mergeSortStudentArrayList = new ArrayList<>(studentArrayList);
+        System.out.println("\n\n Before Student merge sort: ");
+        for (Student s : mergeSortStudentArrayList)
+        {
+            System.out.println(s.toString() + " " + s.name);
+        }
+
+        MergeSort.studentSort(mergeSortStudentArrayList, mergeSortStudentArrayList.size());
+
+        System.out.println("\n\n After Student merge sort: ");
+        for (Student s : mergeSortStudentArrayList)
+        {
+            System.out.println(s.toString() + " " + s.name);
+        }
+
+        System.out.println("\n\nPART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS PART C STUDENTS \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n");
+
+        System.out.println("\n\nPART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n");
+//
+        //BUBBLE SORT
+        List<Enrollment> bubbleSortEnrollmentArrayList = new ArrayList<>(enrollmentArrayList);
+
+        System.out.println("\n\n Before Enrollment bubble sort: ");
+        for (Enrollment e : bubbleSortEnrollmentArrayList)
+        {
+            System.out.println(e.toString());
+        }
+
+        BubbleSort.bubbleSortEnrollment(bubbleSortEnrollmentArrayList);
+
+        System.out.println("\n\n After Enrollment bubble sort: ");
+        for (Enrollment e : bubbleSortEnrollmentArrayList)
+        {
+            System.out.println(e.toString());
+        }
+
+        //SELECTION SORT
+        List<Enrollment> selectionSortEnrollmentArrayList = new ArrayList<>(enrollmentArrayList);
+        System.out.println("\n\n Before Enrollment selection sort: ");
+        for (Enrollment e : selectionSortEnrollmentArrayList)
+        {
+            System.out.println(e.toString());
+        }
+
+        SelectionSort.enrollment(selectionSortEnrollmentArrayList);
+
+        System.out.println("\n\n After Enrollment selection sort: ");
+        for (Enrollment e : bubbleSortEnrollmentArrayList)
+        {
+            System.out.println(e.toString());
+        }
+
+        //MERGE SORT
+        List<Enrollment> mergeSortEnrollmentArrayList = new ArrayList<>(enrollmentArrayList);
+        System.out.println("\n\n Before Enrollment merge sort: ");
+        for (Enrollment s : mergeSortEnrollmentArrayList)
+        {
+            System.out.println(s.toString());
+        }
+
+        MergeSort.enrollmentSort(mergeSortEnrollmentArrayList, mergeSortEnrollmentArrayList.size());
+
+        System.out.println("\n\n After Enrollment merge sort: ");
+        for (Enrollment s : mergeSortEnrollmentArrayList)
+        {
+            System.out.println(s.toString());
+        }
+
+
+        System.out.println("\n\nPART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT PART C ENROLLMENT \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n");
+
+        System.out.println("\n\nPART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n");
+
+        //BUBBLE SORT
+        List<Course> bubbleSortCourseArrayList = new ArrayList<>(courseArrayList);
+
+        System.out.println("\n\n Before Course bubble sort: ");
+        for (Course c : bubbleSortCourseArrayList)
+        {
+            System.out.println(c.toString());
+        }
+
+        BubbleSort.bubbleSortCourse(bubbleSortCourseArrayList);
+
+        System.out.println("\n\n After Course bubble sort: ");
+        for (Course c : bubbleSortCourseArrayList)
+        {
+            System.out.println(c.toString());
+        }
+
+        //SELECTION SORT
+        List<Course> selectionSortCourseArrayList = new ArrayList<>(courseArrayList);
+        System.out.println("\n\n Before Course selection sort: ");
+        for (Course c : selectionSortCourseArrayList)
+        {
+            System.out.println(c.toString());
+        }
+
+        SelectionSort.course(selectionSortCourseArrayList);
+
+        System.out.println("\n\n After Course selection sort: ");
+        for (Course c : selectionSortCourseArrayList)
+        {
+            System.out.println(c.toString());
+        }
+
+        //MERGE SORT
+        List<Course> mergeSortCourseArrayList = new ArrayList<>(courseArrayList);
+        System.out.println("\n\n Before Course merge sort: ");
+        for (Course c : mergeSortCourseArrayList)
+        {
+            System.out.println(c.toString());
+        }
+
+        MergeSort.courseSort(mergeSortCourseArrayList, mergeSortCourseArrayList.size());
+
+        System.out.println("\n\n After Course merge sort: ");
+        for (Course c : mergeSortCourseArrayList)
+        {
+            System.out.println(c.toString());
+        }
+
+        
+        
+        
+        
+        
+        System.out.println("\n\nPART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART C COURSE PART C COURSE PART C COURSE PART C COURSE PART C COURSE \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n");
+
+        
+        
+        
+                System.out.println("\n\nPART D  PART D  PART D  PART D  PART D  \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART D  PART D  PART D  PART D  PART D  \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART D  PART D  PART D  PART D  PART D  \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n"
+                + "PART D  PART D  PART D  PART D  PART D  \n"
+                + "↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ \n");
         
         //LINEAR SEARCH
+        System.out.print("\n\nLinear Student Search");
         System.out.println("Student s1 ID " + s1.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s1.studentId));
         System.out.println("Student s2 ID " + s2.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s2.studentId));
         System.out.println("Student s3 ID " + s3.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s3.studentId));
@@ -86,65 +318,52 @@ public class Lab15
         System.out.println("Student s5 ID " + s5.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s5.studentId));
         System.out.println("Student s6 ID " + s6.studentId + " is found in array index " + LinearSearch.LinearSearchStudent(studentArrayList, s6.studentId));
 
-        
-        
-        
-        
-        
-        //BUBBLE SORT
-        List<Student> bubbleSortStudentArrayList = new ArrayList<>(studentArrayList);
-        
-        
-        System.out.println("\n\n Before bubble sort: ");        
-        for(Student s : bubbleSortStudentArrayList) 
-        {
-            System.out.println(s.toString() + " " + s.name);
-        }
+        System.out.print("\n\nBinary Student Search uses BubbleSort");
+        System.out.println("Student s1 ID " + s1.studentId + " is found in array index " + BinarySearch.binarySearchStudent(studentArrayList, s1.studentId));
+        System.out.println("Student s2 ID " + s2.studentId + " is found in array index " + BinarySearch.binarySearchStudent(studentArrayList, s2.studentId));
+        System.out.println("Student s3 ID " + s3.studentId + " is found in array index " + BinarySearch.binarySearchStudent(studentArrayList, s3.studentId));
+        System.out.println("Student s4 ID " + s4.studentId + " is found in array index " + BinarySearch.binarySearchStudent(studentArrayList, s4.studentId));
+        System.out.println("Student s5 ID " + s5.studentId + " is found in array index " + BinarySearch.binarySearchStudent(studentArrayList, s5.studentId));
+        System.out.println("Student s6 ID " + s6.studentId + " is found in array index " + BinarySearch.binarySearchStudent(studentArrayList, s6.studentId));
 
-        BubbleSort.bubbleSortStudent(bubbleSortStudentArrayList);
-        
-        System.out.println("\n\n After bubble sort: ");        
-        for(Student s : bubbleSortStudentArrayList) 
-        {
-            System.out.println(s.toString() + " " + s.name);
-        }
-        
-        
-        
-        //SELECTION SORT
-        List<Student> selectionSortStudentArrayList = new ArrayList<>(studentArrayList);
-        System.out.println("\n\n Before selection sort: ");        
-        for(Student s : selectionSortStudentArrayList) 
-        {
-            System.out.println(s.toString() + " " + s.name);
-        }
+                //LINEAR SEARCH
+        System.out.print("\n\nLinear Enrollment Search");
+        System.out.println("Enrollment e1 ID " + s1.enrollment + " is found in array index \t" + LinearSearch.LinearSearchEnrollment(enrollmentArrayList, s1.enrollment.enrollmentId));
+        System.out.println("Enrollment e2 ID " + s2.enrollment + " is found in array index \t" + LinearSearch.LinearSearchEnrollment(enrollmentArrayList, s2.enrollment.enrollmentId));
+        System.out.println("Enrollment e3 ID " + s3.enrollment + " is found in array index \t" + LinearSearch.LinearSearchEnrollment(enrollmentArrayList, s3.enrollment.enrollmentId));
+        System.out.println("Enrollment e4 ID " + s4.enrollment + " is found in array index \t" + LinearSearch.LinearSearchEnrollment(enrollmentArrayList, s4.enrollment.enrollmentId));
+        System.out.println("Enrollment e5 ID " + s5.enrollment + " is found in array index \t" + LinearSearch.LinearSearchEnrollment(enrollmentArrayList, s5.enrollment.enrollmentId));
+        System.out.println("Enrollment e6 ID " + s6.enrollment + " is found in array index \t" + LinearSearch.LinearSearchEnrollment(enrollmentArrayList, s6.enrollment.enrollmentId));
 
-        SelectionSort.student(selectionSortStudentArrayList);
-        
-        System.out.println("\n\n After selection sort: ");        
-        for(Student s : selectionSortStudentArrayList) 
-        {
-            System.out.println(s.toString() + " " + s.name);
-        }        
+        System.out.print("\n\nBinary Enrollment Search uses BubbleSort");
+        System.out.println("Enrollment e1 ID " + s1.enrollment + " is found in array index \t" + BinarySearch.binarySearchEnrollment(enrollmentArrayList, s1.enrollment.enrollmentId));
+        System.out.println("Enrollment e2 ID " + s2.enrollment + " is found in array index \t" + BinarySearch.binarySearchEnrollment(enrollmentArrayList, s2.enrollment.enrollmentId));
+        System.out.println("Enrollment e3 ID " + s3.enrollment + " is found in array index \t" + BinarySearch.binarySearchEnrollment(enrollmentArrayList, s3.enrollment.enrollmentId));
+        System.out.println("Enrollment e4 ID " + s4.enrollment + " is found in array index \t" + BinarySearch.binarySearchEnrollment(enrollmentArrayList, s4.enrollment.enrollmentId));
+        System.out.println("Enrollment e5 ID " + s5.enrollment + " is found in array index \t" + BinarySearch.binarySearchEnrollment(enrollmentArrayList, s5.enrollment.enrollmentId));
+        System.out.println("Enrollment e6 ID " + s6.enrollment + " is found in array index \t" + BinarySearch.binarySearchEnrollment(enrollmentArrayList, s6.enrollment.enrollmentId));
+
+                //LINEAR SEARCH
+        System.out.print("\n\nLinear Course Search");
+        System.out.println("Course c1 ID " + c1.courseCode + " is found in array index " + LinearSearch.LinearSearchCourse(courseArrayList, c1.courseCode));
+        System.out.println("Course c2 ID " + c2.courseCode + " is found in array index " + LinearSearch.LinearSearchCourse(courseArrayList, c2.courseCode));
+        System.out.println("Course c3 ID " + c3.courseCode + " is found in array index " + LinearSearch.LinearSearchCourse(courseArrayList, c3.courseCode));
+
+        System.out.print("\n\nBinary Course Search uses BubbleSort");
+        System.out.println("Course c1 ID " + c1.courseCode + " is found in array index " + BinarySearch.binarySearchCourse(courseArrayList, c1.courseCode));
+        System.out.println("Course c2 ID " + c2.courseCode + " is found in array index " + BinarySearch.binarySearchCourse(courseArrayList, c2.courseCode));
+        System.out.println("Course c3 ID " + c3.courseCode + " is found in array index " + BinarySearch.binarySearchCourse(courseArrayList, c3.courseCode));
 
         
-        //MERGE SORT
-        List<Student> mergeSortStudentArrayList = new ArrayList<>(studentArrayList);
-        System.out.println("\n\n Before merge sort: ");        
-        for(Student s : mergeSortStudentArrayList) 
-        {
-            System.out.println(s.toString() + " " + s.name);
-        }
-        
-        MergeSort.studentSort(mergeSortStudentArrayList, mergeSortStudentArrayList.size());
-        
-        System.out.println("\n\n After merge sort: ");        
-        for(Student s : mergeSortStudentArrayList) 
-        {
-            System.out.println(s.toString() + " " + s.name);
-        }        
-        
-        
+                System.out.println("\n\nPART D  PART D  PART D  PART D  PART D  \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART D  PART D  PART D  PART D  PART D  \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART D  PART D  PART D  PART D  PART D  \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n"
+                + "PART D  PART D  PART D  PART D  PART D  \n"
+                + "↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ \n");
+
 //
 //        //BY ID
 //        System.out.println("\n\nStudents Array by ID:");
