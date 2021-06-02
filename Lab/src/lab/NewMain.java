@@ -16,7 +16,7 @@ public class NewMain {
      */
     public static void main(String[] args)
     {
-        // TODO code application logic here
+        System.out.println("Directly run a different main class.\nThis one will only print this text.");
     }
     
 }

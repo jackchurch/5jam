@@ -29,7 +29,7 @@ import sortingAlgorithms.SelectionSort;
  *
  * @author jackc
  */
-public class Lab15
+public class SearchingAndSortingDemo
 {
 
     /**

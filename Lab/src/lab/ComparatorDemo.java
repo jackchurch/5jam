@@ -20,7 +20,7 @@ import java.util.TreeSet;
  *
  * @author 000080409
  */
-public class Lab14
+public class ComparatorDemo
 {
 
     /**
