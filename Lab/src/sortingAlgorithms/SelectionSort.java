@@ -14,8 +14,7 @@ import lab.Student;
  *
  * @author jackc
  */
-public class SelectionSort
-{
+public class SelectionSort {
 //    public static void student(Student[] array)
 //    {
 //        Student s;
@@ -59,8 +58,6 @@ public class SelectionSort
 //            array[j] = e;
 //        }
 //    }
-    
-    
 //    public static void course(Course[] array)
 //    {
 //        Course c;
@@ -82,19 +79,20 @@ public class SelectionSort
 //            array[j] = c;
 //        }
 //    }
-    
-    public static void student(List<Student> list)
-    {
+
+    /**
+     *
+     * Input list of students and sort by student.personId using Selection Sort
+     * @param list
+     */
+    public static void student(List<Student> list) {
         Student temp;
         int min;
 
-        for (int j = 0; j < list.size() - 1; j++)
-        {
+        for (int j = 0; j < list.size() - 1; j++) {
             min = j;
-            for (int k = j + 1; k < list.size(); k++)
-            {
-                if (list.get(k).studentId < list.get(min).studentId)
-                {
+            for (int k = j + 1; k < list.size(); k++) {
+                if (list.get(k).studentId < list.get(min).studentId) {
                     min = k;
                 }
             }
@@ -104,18 +102,18 @@ public class SelectionSort
         }
     }
 
-    public static void enrollment(List<Enrollment> list)
-    {
+    /**
+     * Input list of enrollments and sort by enrollmentID using Selection Sort
+     * @param list
+     */
+    public static void enrollment(List<Enrollment> list) {
         Enrollment temp;
         int min;
 
-        for (int j = 0; j < list.size() - 1; j++)
-        {
+        for (int j = 0; j < list.size() - 1; j++) {
             min = j;
-            for (int k = j + 1; k < list.size(); k++)
-            {
-                if (list.get(k).enrollmentId < list.get(min).enrollmentId)
-                {
+            for (int k = j + 1; k < list.size(); k++) {
+                if (list.get(k).enrollmentId < list.get(min).enrollmentId) {
                     min = k;
                 }
             }
@@ -125,18 +123,19 @@ public class SelectionSort
         }
     }
 
-    public static void course(List<Course> list)
-    {
+    /**
+     *
+     * Input list of courses and sort by by course code using Selection Sort
+     * @param list
+     */
+    public static void course(List<Course> list) {
         Course temp;
         int min;
 
-        for (int j = 0; j < list.size() - 1; j++)
-        {
+        for (int j = 0; j < list.size() - 1; j++) {
             min = j;
-            for (int k = j + 1; k < list.size(); k++)
-            {
-                if (list.get(k).courseCode < list.get(min).courseCode)
-                {
+            for (int k = j + 1; k < list.size(); k++) {
+                if (list.get(k).courseCode < list.get(min).courseCode) {
                     min = k;
                 }
             }

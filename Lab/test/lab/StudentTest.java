@@ -31,48 +31,45 @@ public class StudentTest {
     //Made a student and enrollment: Student----------------------------|  Enrollment-----------------------------------------------|  Person-----------------------------------| Address--------------------------------------------------------------|
     Student s2 = new Student("Retirement", LocalDate.parse("1958-09-21"), new Enrollment(100, LocalDate.parse("1935-09-29"), "A", "2", c3), 2, "David Bauer", "unknown email", "+2", new Address("2", "Carrer de Hill", "The Village", "0000", "The Island"));
 
-    //Made a student and enrollment: Student--------------------------------|  Enrollment-----------------------------------------------|  Person---------------------------------------| Address--------------------------------------------------------------|
-    Student s3 = new Student("Business owner", LocalDate.parse("1958-09-21"), new Enrollment(100, LocalDate.parse("1944-08-29"), "B", "1", c2), 2, "Georgina Cookson", "unknown email", "+2", new Address("4", "Beach Via", "The Village", "0000", "The Island"));
-
-    //Made a student and enrollment: Student----------------------------|  Enrollment-----------------------------------------------|  Person----------------------------------------| Address--------------------------------------------------------------|
-    Student s4 = new Student("Retirement", LocalDate.parse("1958-09-21"), new Enrollment(64, LocalDate.parse("1937-12-29"), "A", "2", c3), 45, "Kenneth Griffith", "unknown email", "+45", new Address("45", "Rue Forest", "The Village", "0000", "The Island"));
-
-    //Made a student and enrollment: Student--------------------------------|  Enrollment-----------------------------------------------|  Person---------------------------------------| Address--------------------------------------------------------------|
-    Student s5 = new Student("Island Security", LocalDate.parse("1975-03-24"), new Enrollment(4, LocalDate.parse("1941-12-29"), "B", "1", c3), 2, "Anton Rodgers", "unknown email", "+44", new Address("44", "Sky Strauss", "The Village", "0000", "The Island"));
-
-    //Made a student and enrollment: Student-------------------------------|  Enrollment-----------------------------------------------|  Person----------------------------------------| Address--------------------------------------------------------------|
-    Student s6 = new Student("Island Security", LocalDate.parse("1975-03-24"), new Enrollment(5, LocalDate.parse("1941-12-29"), "B", "1", c3), 85, "Anton Rodgers", "unknown email", "+85", new Address("44", "Sky Avenue", "The Village", "0000", "The Island"));
-
-    public StudentTest()
-    {
-    }
-
-    @BeforeClass
-    public static void setUpClass()
-    {
-    }
-
-    @AfterClass
-    public static void tearDownClass()
-    {
-    }
-
-    @Before
-    public void setUp()
-    {
-    }
-
-    @After
-    public void tearDown()
-    {
+    /**
+     *
+     */
+    public StudentTest() {
     }
 
     /**
-     * Test  of hashCode method, of class Student.
+     *
+     */
+    @BeforeClass
+    public static void setUpClass() {
+    }
+
+    /**
+     *
+     */
+    @AfterClass
+    public static void tearDownClass() {
+    }
+
+    /**
+     *
+     */
+    @Before
+    public void setUp() {
+    }
+
+    /**
+     *
+     */
+    @After
+    public void tearDown() {
+    }
+
+    /**
+     * Test of hashCode method, of class Student.
      */
     @Test
-    public void testHashCode()
-    {
+    public void testHashCode() {
         System.out.println("hashCode");
         Student instance = s1;
         int expResult = 6;
@@ -84,16 +81,225 @@ public class StudentTest {
      * Test of equals method, of class Student.
      */
     @Test
-    public void testEquals()
-    {
+    public void testEquals() {
         System.out.println("equals");
-        Object obj = s1;
-        Student instance = s2;
-        boolean expResult = false;
+        Object obj = new Student("New arrival", LocalDate.parse("1967-09-29"), new Enrollment(36, LocalDate.parse("1967-09-29"), "F", "1", c1), 6, "Patrick McGoohan", "unknown email", "+6", new Address("6", "Bluff Street", "The Village", "0000", "The Island"));
+        Student instance = s1;
+        boolean expResult = true;
         boolean result = instance.equals(obj);
+        assertEquals(expResult, result);
+
+    }
+
+    /**
+     * Test of getStudentId method, of class Student.
+     */
+    @Test
+    public void testGetStudentId() {
+        System.out.println("getStudentId");
+        Student instance = s1;
+        int expResult = 6;
+        int result = instance.getStudentId();
+        assertEquals(expResult, result);
+
+    }
+
+    /**
+     * Test of setStudentId method, of class Student.
+     */
+    @Test
+    public void testSetStudentId() {
+        System.out.println("setStudentId");
+        int studentId = 66;
+        Student instance = s1;
+        instance.setStudentId(studentId);
+    }
+
+    /**
+     * Test of getProgram method, of class Student.
+     */
+    @Test
+    public void testGetProgram() {
+        System.out.println("getProgram");
+        Student instance = s1;
+        String expResult = "New arrival";
+        String result = instance.getProgram();
         assertEquals(expResult, result);
     }
 
-    
-    
+    /**
+     * Test of setProgram method, of class Student.
+     */
+    @Test
+    public void testSetProgram() {
+        System.out.println("setProgram");
+        String program = "Missing";
+        Student instance = s1;
+        instance.setProgram(program);
+    }
+
+    /**
+     * Test of getDateRegistered method, of class Student.
+     */
+    @Test
+    public void testGetDateRegistered() {
+        System.out.println("getDateRegistered");
+        Student instance = s1;
+        LocalDate expResult = LocalDate.parse("1967-09-29");
+        LocalDate result = instance.getDateRegistered();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setDateRegistered method, of class Student.
+     */
+    @Test
+    public void testSetDateRegistered() {
+        System.out.println("setDateRegistered");
+        LocalDate dateRegistered = LocalDate.parse("1800-01-01");
+        Student instance = s1;
+        instance.setDateRegistered(dateRegistered);
+    }
+
+    /**
+     * Test of getEnrollment method, of class Student.
+     */
+    @Test
+    public void testGetEnrollment() {
+        System.out.println("getEnrollment");
+        Student instance = s1;
+        Enrollment expResult = s1.enrollment;
+        Enrollment result = instance.getEnrollment();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setEnrollment method, of class Student.
+     */
+    @Test
+    public void testSetEnrollment() {
+        System.out.println("setEnrollment");
+        Enrollment enrollment = new Enrollment(100, LocalDate.parse("1935-09-29"), "A", "2", c3);
+        Student instance = s1;
+        instance.setEnrollment(enrollment);
+
+    }
+
+    /**
+     * Test of getId method, of class Student.
+     */
+    @Test
+    public void testGetId() {
+        System.out.println("getId");
+        Student instance = s1;
+        int expResult = 6;
+        int result = instance.getId();
+        assertEquals(expResult, result);
+
+    }
+
+    /**
+     * Test of setId method, of class Student.
+     */
+    @Test
+    public void testSetId() {
+        System.out.println("setId");
+        int id = 66;
+        Student instance = s1;
+        instance.setId(id);
+
+    }
+
+    /**
+     * Test of getName method, of class Student.
+     */
+    @Test
+    public void testGetName() {
+        System.out.println("getName");
+        Student instance = s1;
+        String expResult = "Patrick McGoohan";
+        String result = instance.getName();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setName method, of class Student.
+     */
+    @Test
+    public void testSetName() {
+        System.out.println("setName");
+        String name = "Jim Caviezel";
+        Student instance = s1;
+        instance.setName(name);
+    }
+
+    /**
+     * Test of getEmail method, of class Student.
+     */
+    @Test
+    public void testGetEmail() {
+        System.out.println("getEmail");
+        Student instance = s1;
+        String expResult = "unknown email";
+        String result = instance.getEmail();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setEmail method, of class Student.
+     */
+    @Test
+    public void testSetEmail() {
+        System.out.println("setEmail");
+        String email = "Email doesn't exsit in The Village.";
+        Student instance = s1;
+        instance.setEmail(email);
+    }
+
+    /**
+     * Test of getTelNum method, of class Student.
+     */
+    @Test
+    public void testGetTelNum() {
+        System.out.println("getTelNum");
+        Student instance = s1;
+        String expResult = "+6";
+        String result = instance.getTelNum();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setTelNum method, of class Student.
+     */
+    @Test
+    public void testSetTelNum() {
+        System.out.println("setTelNum");
+        String telNum = "+66";
+        Student instance = s1;
+        instance.setTelNum(telNum);
+    }
+
+    /**
+     * Test of getAddress method, of class Student.
+     */
+    @Test
+    public void testGetAddress() {
+        System.out.println("getAddress");
+        Student instance = s1;
+        Address expResult = s1.getAddress();
+        Address result = instance.getAddress();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setAddress method, of class Student.
+     */
+    @Test
+    public void testSetAddress() {
+        System.out.println("setAddress");
+        Address address = new Address("2", "Carrer de Hill", "The Village", "0000", "The Island");
+        Student instance = s1;
+        instance.setAddress(address);
+    }
+
 }

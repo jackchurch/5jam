@@ -14,8 +14,13 @@ import lab.Enrollment;
  */
 public class SortEnrollmentByDateEnrolled implements Comparator<Enrollment> {
 
-    public int compare(Enrollment e1, Enrollment e2)
-    {
+    /**
+     * Compare enrollments by date enrolled. 
+     * @param e1
+     * @param e2
+     * @return
+     */
+    public int compare(Enrollment e1, Enrollment e2) {
         return e1.dateEnrolled.compareTo(e2.dateEnrolled);
     }
 }

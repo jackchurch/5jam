@@ -12,17 +12,42 @@ import java.util.Objects;
  *
  * @author 000080409
  */
-public class Enrollment
-{
+public class Enrollment {
 
+    /**
+     *
+     */
     public int enrollmentId;
+
+    /**
+     *
+     */
     public LocalDate dateEnrolled;
+
+    /**
+     *
+     */
     public String grade;
+
+    /**
+     *
+     */
     public String semester;
+
+    /**
+     *
+     */
     public Course course;
 
-    public Enrollment(int enrollmentId, LocalDate dateEnrolled, String grade, String semester, Course course)
-    {
+    /**
+     *
+     * @param enrollmentId
+     * @param dateEnrolled
+     * @param grade
+     * @param semester
+     * @param course
+     */
+    public Enrollment(int enrollmentId, LocalDate dateEnrolled, String grade, String semester, Course course) {
         this.enrollmentId = enrollmentId;
         this.dateEnrolled = dateEnrolled;
         this.grade = grade;
@@ -30,16 +55,22 @@ public class Enrollment
         this.course = course;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "\nEnrollment ID: " + this.enrollmentId
                 + "\tDate Enrolled: " + this.dateEnrolled
                 + "\tGrade: " + this.grade;
     }
 
-    public String allToString()
-    {
+    /**
+     *
+     * @return
+     */
+    public String allToString() {
         return super.toString()
                 + "\nCLASS Enrollment: Enrollment ID: " + this.enrollmentId
                 + ", Date Enrolled: " + this.dateEnrolled
@@ -49,85 +80,120 @@ public class Enrollment
     }
 
     //Enrollment id is sufficient. 
+
+    /**
+     *
+     * @return
+     */
     @Override
-    public int hashCode()
-    {
-        int hash = 3;
-        hash = 13 * hash + Objects.hashCode(this.enrollmentId);
-        return hash;
+    public int hashCode() {
+
+        return this.enrollmentId;
+
     }
 
     //Enrollment id is sufficient. 
+
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-        {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
-        if (obj == null)
-        {
+        if (obj == null) {
             return false;
         }
-        if (getClass() != obj.getClass())
-        {
+        if (getClass() != obj.getClass()) {
             return false;
         }
         final Enrollment other = (Enrollment) obj;
-        if (!Objects.equals(this.enrollmentId, other.enrollmentId))
-        {
+        if (!Objects.equals(this.enrollmentId, other.enrollmentId)) {
             return false;
         }
         return true;
     }
 
-    public int getEnrollmentId()
-    {
+    /**
+     *
+     * @return
+     */
+    public int getEnrollmentId() {
         return enrollmentId;
     }
 
-    public void setEnrollmentId(int enrollmentId)
-    {
+    /**
+     *
+     * @param enrollmentId
+     */
+    public void setEnrollmentId(int enrollmentId) {
         this.enrollmentId = enrollmentId;
     }
 
-    public LocalDate getDateEnrolled()
-    {
+    /**
+     *
+     * @return
+     */
+    public LocalDate getDateEnrolled() {
         return dateEnrolled;
     }
 
-    public void setDateEnrolled(LocalDate dateEnrolled)
-    {
+    /**
+     *
+     * @param dateEnrolled
+     */
+    public void setDateEnrolled(LocalDate dateEnrolled) {
         this.dateEnrolled = dateEnrolled;
     }
 
-    public String getGrade()
-    {
+    /**
+     *
+     * @return
+     */
+    public String getGrade() {
         return grade;
     }
 
-    public void setGrade(String grade)
-    {
+    /**
+     *
+     * @param grade
+     */
+    public void setGrade(String grade) {
         this.grade = grade;
     }
 
-    public String getSemester()
-    {
+    /**
+     *
+     * @return
+     */
+    public String getSemester() {
         return semester;
     }
 
-    public void setSemester(String semester)
-    {
+    /**
+     *
+     * @param semester
+     */
+    public void setSemester(String semester) {
         this.semester = semester;
     }
 
-    public Course getCourse()
-    {
+    /**
+     *
+     * @return
+     */
+    public Course getCourse() {
         return course;
     }
 
-    public void setCourse(Course course)
-    {
+    /**
+     *
+     * @param course
+     */
+    public void setCourse(Course course) {
         this.course = course;
     }
 

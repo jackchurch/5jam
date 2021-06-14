@@ -14,8 +14,7 @@ import lab.Student;
  *
  * @author jackc
  */
-public class LinearSearch
-{
+public class LinearSearch {
 
 //    public static <E extends Comparable<E>> Integer LinearSearch(E[] genericArray, E key)
 //    {
@@ -28,7 +27,6 @@ public class LinearSearch
 //        }
 //        return -1;
 //    }
-
 //    public static int LinearSearchStudent(Student arr[], int key)
 //    {
 //        for (int i = 0; i < arr.length; i++)
@@ -40,7 +38,6 @@ public class LinearSearch
 //        }
 //        return -1;
 //    }
-
 //        public static int LinearSearchEnrollment(Enrollment arr[], int key)
 //    {
 //        for (int i = 0; i < arr.length; i++)
@@ -64,39 +61,46 @@ public class LinearSearch
 //        }
 //        return -1;
 //    }
-    
-    
-    public static int LinearSearchStudent(List<Student> a, int studentId)
-    {
-        for (int i = 0; i < a.size(); i++)
-        {
-            if (a.get(i).studentId == studentId)
-            {
+
+    /**
+     * Input list of students and student Id to find. Result will be student in list if exists. 
+     * @param a
+     * @param studentId
+     * @return
+     */
+    public static int LinearSearchStudent(List<Student> a, int studentId) {
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i).studentId == studentId) {
                 return i;
             }
         }
         return -1;
     }
 
-    public static int LinearSearchEnrollment(List<Enrollment> a, int enrollmentId)
-    {
-        for (int i = 0; i < a.size(); i++)
-        {
-            if (a.get(i).enrollmentId == enrollmentId)
-            {
+    /**
+     * Input list of enrollments and enrollmentId to find. Result will be enrollment in list if exists. 
+     * @param a
+     * @param enrollmentId
+     * @return
+     */
+    public static int LinearSearchEnrollment(List<Enrollment> a, int enrollmentId) {
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i).enrollmentId == enrollmentId) {
                 return i;
             }
         }
         return -1;
     }
-    
-    
-        public static int LinearSearchCourse(List<Course> a, int courseCode)
-    {
-        for (int i = 0; i < a.size(); i++)
-        {
-            if (a.get(i).courseCode == courseCode)
-            {
+
+    /**
+     * Input list of courses and courseCode to find. Result will be course in list if exists. 
+     * @param a
+     * @param courseCode
+     * @return
+     */
+    public static int LinearSearchCourse(List<Course> a, int courseCode) {
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i).courseCode == courseCode) {
                 return i;
             }
         }

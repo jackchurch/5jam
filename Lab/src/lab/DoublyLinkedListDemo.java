@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,14 +12,12 @@ import linkedLists.*;
  *
  * @author jackc
  */
-public class DoublyLinkedListDemo
-{
+public class DoublyLinkedListDemo {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // TODO code application logic here
         //Make course
 //        Course c1 = new Course("5JAW", "Java web", 200.99);
@@ -71,23 +69,44 @@ public class DoublyLinkedListDemo
 
         DoublyLinkedList studentDLL = new DoublyLinkedList();
         studentDLL.addFirst(sN1);
-        studentDLL.addLast(sN2);
-        studentDLL.addLast(sN3);
-        studentDLL.addLast(sN4);
+        studentDLL.addFirst(sN2);
+        System.out.println("\nAdding first: studentDLL toString: " + studentDLL.toString());
+
         studentDLL.addLast(sN5);
         studentDLL.addLast(sN6);
-        System.out.println("\nstudentDLL toString: " + studentDLL.toString());
-        System.out.println("\nstudentDLL reversed toString: " + studentDLL.toStringReverse());
-        
-        DoublyLinkedList enrollmentDLL=  new DoublyLinkedList();
+        System.out.println("\nAdding last: studentDLL toString: " + studentDLL.toString());
+
+        studentDLL.insertMiddle(3, sN3);
+        studentDLL.insertMiddle(4, sN4);
+        System.out.println("\nInsert middle: studentDLL toString: " + studentDLL.toString());
+
+        studentDLL.removeFirst();
+        studentDLL.removeMiddle(3);
+        studentDLL.removeLast();
+        System.out.println("\nRemove first, 3rd (after removing first) and last):  studentDLL toString: " + studentDLL.toString());
+
+        System.out.println("\nstudentDLL reversed after removals toString: " + studentDLL.toStringReverse());
+
+        DoublyLinkedList enrollmentDLL = new DoublyLinkedList();
         enrollmentDLL.addFirst(eN1);
-        enrollmentDLL.addLast(eN2);
-        enrollmentDLL.addLast(eN3);
-        enrollmentDLL.addLast(eN4);
+        enrollmentDLL.addFirst(eN2);
+
+        System.out.println("\nAdding first: enrollmentDLL toString: " + enrollmentDLL.toString());
+
         enrollmentDLL.addLast(eN5);
         enrollmentDLL.addLast(eN6);
-        System.out.println("\nenrollmentDLL toString: " + enrollmentDLL.toString());
-        System.out.println("\nenrollmentDLL reversed toString: " + enrollmentDLL.toStringReverse());
+        System.out.println("\nAdding last: enrollmentDLL toString: " + enrollmentDLL.toString());
+
+        enrollmentDLL.insertMiddle(3, eN3);
+        enrollmentDLL.insertMiddle(4, eN4);
+        System.out.println("\nAdding middle: enrollmentDLL toString: " + enrollmentDLL.toString());
+
+        enrollmentDLL.removeFirst();
+        enrollmentDLL.removeMiddle(3);
+        enrollmentDLL.removeLast();
+        System.out.println("\nRemove first, 3rd (after removing first) and last):  enrollmentDLL toString: " + enrollmentDLL.toString());
+
+        System.out.println("\nenrollmentDLL reversed after removals toString: " + enrollmentDLL.toStringReverse());
 
         DoublyLinkedList courseDLL = new DoublyLinkedList();
         courseDLL.addFirst(cN1);
@@ -96,11 +115,13 @@ public class DoublyLinkedListDemo
         System.out.println("\ncourseDLL toString: " + courseDLL.toString());
         System.out.println("\ncourseDLL reversed toString: " + courseDLL.toStringReverse());
 
-
     }
 
-    public static void printList(Node node)
-    {
+    /**
+     *
+     * @param node
+     */
+    public static void printList(Node node) {
         while (node != null) {
             System.out.println(node.getValue());
             node = node.getNext();

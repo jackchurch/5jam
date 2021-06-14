@@ -16,90 +16,89 @@ import sortingAlgorithms.SelectionSort;
  *
  * @author 000080409
  */
-public class BinarySearch
-{
+public class BinarySearch {
 
-    public static int binarySearchStudent(List<Student> list, int searchElement)
-    {
+    /**
+     * Input list of student and studentId to find. Result will be student in list if exists via binary search. 
+     * @param list
+     * @param searchElement
+     * @return
+     */
+    public static int binarySearchStudent(List<Student> list, int searchElement) {
         int numElements = list.size();
         int min = 0;
         int max = numElements - 1;
 
         SelectionSort.student(list);
-        do
-        {
+        do {
             int mid = (min + max) / 2;
-            if (searchElement > list.get(mid).studentId)
-            {
+            if (searchElement > list.get(mid).studentId) {
                 min = mid + 1;
-            } else
-            {
+            } else {
                 max = mid - 1;
             }
-            if (list.get(mid).studentId == searchElement)
-            {
+            if (list.get(mid).studentId == searchElement) {
                 return mid;
             }
-            if (min > max)
-            {
+            if (min > max) {
                 return -1;
             }
         } while (min <= max);
         return -1;
     }
 
-    public static int binarySearchEnrollment(List<Enrollment> list, int searchElement)
-    {
+    /**
+     * Input list of enrollmnet and enrollmentId to find. Result will be enrollment in list if exists via binary search. 
+     * @param list
+     * @param searchElement
+     * @return
+     */
+    public static int binarySearchEnrollment(List<Enrollment> list, int searchElement) {
         int numElements = list.size();
         int min = 0;
         int max = numElements - 1;
 
         SelectionSort.enrollment(list);
-        do
-        {
+        do {
             int mid = (min + max) / 2;
-            if (searchElement > list.get(mid).enrollmentId)
-            {
+            if (searchElement > list.get(mid).enrollmentId) {
                 min = mid + 1;
-            } else
-            {
+            } else {
                 max = mid - 1;
             }
-            if (list.get(mid).enrollmentId == searchElement)
-            {
+            if (list.get(mid).enrollmentId == searchElement) {
                 return mid;
             }
-            if (min > max)
-            {
+            if (min > max) {
                 return -1;
             }
         } while (min <= max);
         return -1;
     }
 
-    public static int binarySearchCourse(List<Course> list, int searchElement)
-    {
+    /**
+     * Input list of course and courseCode to find. Result will be course in list if exists via binary search. 
+     * @param list
+     * @param searchElement
+     * @return
+     */
+    public static int binarySearchCourse(List<Course> list, int searchElement) {
         int numElements = list.size();
         int min = 0;
         int max = numElements - 1;
 
         SelectionSort.course(list);
-        do
-        {
+        do {
             int mid = (min + max) / 2;
-            if (searchElement > list.get(mid).courseCode)
-            {
+            if (searchElement > list.get(mid).courseCode) {
                 min = mid + 1;
-            } else
-            {
+            } else {
                 max = mid - 1;
             }
-            if (list.get(mid).courseCode == searchElement)
-            {
+            if (list.get(mid).courseCode == searchElement) {
                 return mid;
             }
-            if (min > max)
-            {
+            if (min > max) {
                 return -1;
             }
         } while (min <= max);

@@ -14,8 +14,13 @@ import lab.Student;
  */
 public class SortStudentByName implements Comparator<Student> {
 
-    public int compare(Student s1, Student s2)
-    {
+    /**
+     *Compare two students by name ignoring case and spaces before / after. 
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public int compare(Student s1, Student s2) {
         return s1.name.trim().compareToIgnoreCase(s2.name.trim());
     }
 }

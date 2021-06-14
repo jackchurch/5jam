@@ -20,14 +20,12 @@ import java.util.TreeSet;
  *
  * @author 000080409
  */
-public class ComparatorDemo
-{
+public class ComparatorDemo {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         // TODO code application logic here
         //Make course

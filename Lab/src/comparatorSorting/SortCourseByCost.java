@@ -12,14 +12,23 @@ import lab.Course;
  *
  * @author jackc
  */
-public class SortCourseByCost implements Comparator<Course>{
+public class SortCourseByCost implements Comparator<Course> {
 
-    public int compare(Course c1, Course c2) 
-    {
+    /**
+     * Compare two courses by cost. 
+     * @param c1
+     * @param c2
+     * @return
+     */
+    public int compare(Course c1, Course c2) {
         double delta = c1.cost - c2.cost;
-        if (delta > 0) return 1;
-        if (delta < 0) return -1;
+        if (delta > 0) {
+            return 1;
+        }
+        if (delta < 0) {
+            return -1;
+        }
         return 0;
     }
-    
+
 }

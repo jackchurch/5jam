@@ -12,11 +12,16 @@ import lab.Student;
  *
  * @author jackc
  */
-public class SortStudentById implements Comparator<Student>{
+public class SortStudentById implements Comparator<Student> {
 
-    public int compare(Student s1, Student s2) 
-    {
+    /**
+     * Compare 2 students by ID. 
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public int compare(Student s1, Student s2) {
         return s1.id - s2.id;
     }
-    
+
 }

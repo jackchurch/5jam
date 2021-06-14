@@ -14,9 +14,14 @@ import lab.Enrollment;
  */
 public class SortEnrollmentById implements Comparator<Enrollment> {
 
-    public int compare(Enrollment e1, Enrollment e2) 
-    {
+    /**
+     * Compare enrollments by ID. 
+     * @param e1
+     * @param e2
+     * @return
+     */
+    public int compare(Enrollment e1, Enrollment e2) {
         return e1.enrollmentId - e2.enrollmentId;
     }
-    
+
 }

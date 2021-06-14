@@ -14,8 +14,7 @@ import lab.Student;
  *
  * @author jackc
  */
-public class BubbleSort
-{
+public class BubbleSort {
     //Not worth the effort for a generic bubble sort
     //    public <T> void bubbleSortOfInt(T[] inputArray)
 //    {
@@ -84,18 +83,19 @@ public class BubbleSort
 //            }
 //        }
 //    }
-    public static void bubbleSortStudent(List<Student> list)
-    {
+
+    /**
+     * Input List of students to sort list by Bubble Sort. 
+     * @param list
+     */
+    public static void bubbleSortStudent(List<Student> list) {
         Student temp;
         boolean sorted = false;
 
-        while (!sorted)
-        {
+        while (!sorted) {
             sorted = true;
-            for (int i = 0; i < list.size() - 1; i++)
-            {
-                if (list.get(i).studentId > (list.get(i + 1).studentId))
-                {
+            for (int i = 0; i < list.size() - 1; i++) {
+                if (list.get(i).studentId > (list.get(i + 1).studentId)) {
                     temp = list.get(i);
                     list.set(i, list.get(i + 1));
                     list.set(i + 1, temp);
@@ -105,18 +105,18 @@ public class BubbleSort
         }
     }
 
-    public static void bubbleSortEnrollment(List<Enrollment> list)
-    {
+    /**
+     * Input List of enrollments to sort list by Bubble Sort. 
+     * @param list
+     */
+    public static void bubbleSortEnrollment(List<Enrollment> list) {
         Enrollment temp;
         boolean sorted = false;
 
-        while (!sorted)
-        {
+        while (!sorted) {
             sorted = true;
-            for (int i = 0; i < list.size() - 1; i++)
-            {
-                if (list.get(i).enrollmentId > (list.get(i + 1).enrollmentId))
-                {
+            for (int i = 0; i < list.size() - 1; i++) {
+                if (list.get(i).enrollmentId > (list.get(i + 1).enrollmentId)) {
                     temp = list.get(i);
                     list.set(i, list.get(i + 1));
                     list.set(i + 1, temp);
@@ -127,18 +127,18 @@ public class BubbleSort
 
     }
 
-    public static void bubbleSortCourse(List<Course> list)
-    {
+    /**
+     * Input List of courses to sort list by Bubble Sort. 
+     * @param list
+     */
+    public static void bubbleSortCourse(List<Course> list) {
         Course temp;
         boolean sorted = false;
 
-        while (!sorted)
-        {
+        while (!sorted) {
             sorted = true;
-            for (int i = 0; i < list.size() - 1; i++)
-            {
-                if (list.get(i).courseCode > (list.get(i + 1).courseCode))
-                {
+            for (int i = 0; i < list.size() - 1; i++) {
+                if (list.get(i).courseCode > (list.get(i + 1).courseCode)) {
                     temp = list.get(i);
                     list.set(i, list.get(i + 1));
                     list.set(i + 1, temp);

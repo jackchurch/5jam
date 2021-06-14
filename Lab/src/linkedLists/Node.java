@@ -7,52 +7,83 @@ package linkedLists;
 
 /**
  * @author jackc
+ * @param <T>
  */
-public class Node<T>
-{
-    
+public class Node<T> {
+
+    /**
+     * Create node type. 
+     */
     public T value;
+
+    /**
+     *Create node.next parameter.  
+     */
     public Node next;
+
+    /**
+     *Create node.previous parameter. 
+     */
     public Node previous;
 
     //CONSTRUCTOR
-    public Node(T value)
-    {
+
+    /**
+     *
+     * @param value
+     */
+    public Node(T value) {
         this.value = value;
     }
-    
-    
+
     //GETTERS AND SETTERS
-    public T getValue()
-    {
+
+    /**
+     *
+     * @return
+     */
+    public T getValue() {
         return value;
     }
 
-    public void setValue(T value)
-    {
+    /**
+     *
+     * @param value
+     */
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public Node getNext()
-    {
+    /**
+     *
+     * @return
+     */
+    public Node getNext() {
         return next;
     }
 
-    public void setNext(Node next)
-    {
+    /**
+     *
+     * @param next
+     */
+    public void setNext(Node next) {
         this.next = next;
     }
 
-    public Node getPrevious()
-    {
+    /**
+     *
+     * @return
+     */
+    public Node getPrevious() {
         return previous;
     }
 
-    public void setPrevious(Node previous)
-    {
+    /**
+     *
+     * @param previous
+     */
+    public void setPrevious(Node previous) {
         this.previous = previous;
     }
-    
-    
-    
+
 }

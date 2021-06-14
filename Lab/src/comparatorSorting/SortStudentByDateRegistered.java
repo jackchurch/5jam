@@ -12,10 +12,15 @@ import lab.Student;
  *
  * @author jackc
  */
-public class SortStudentByDateRegistered implements Comparator<Student>{
-    
-    public int compare(Student s1, Student s2) 
-    {
+public class SortStudentByDateRegistered implements Comparator<Student> {
+
+    /**
+     * Compare students based on date registerd. 
+     * @param s1
+     * @param s2
+     * @return
+     */
+    public int compare(Student s1, Student s2) {
         return s1.dateRegistered.compareTo(s2.dateRegistered);
     }
 }

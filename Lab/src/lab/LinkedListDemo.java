@@ -14,14 +14,12 @@ import linkedLists.*;
  *
  * @author jackc
  */
-public class LinkedListDemo
-{
+public class LinkedListDemo {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // TODO code application logic here
         //Make course
 //        Course c1 = new Course("5JAW", "Java web", 200.99);
@@ -53,7 +51,6 @@ public class LinkedListDemo
         //Made a studentSort and enrollment: Student-------------------------------|  Enrollment-----------------------------------------------|  Person----------------------------------------| Address--------------------------------------------------------------|
         Student s6 = new Student("Island Security", LocalDate.parse("1975-03-24"), new Enrollment(5, LocalDate.parse("1941-12-29"), "B", "1", c3), 85, "Anton Rodgers", "unknown email", "+85", new Address("44", "Sky Avenue", "The Village", "0000", "The Island"));
 
-
         Node sN1 = new Node(s1);
         Node sN2 = new Node(s2);
         Node sN3 = new Node(s3);
@@ -72,34 +69,54 @@ public class LinkedListDemo
         Node cN2 = new Node(c2);
         Node cN3 = new Node(c3);
 
-
         LinkedList studentLL = new LinkedList();
         studentLL.addFirst(sN1);
-        studentLL.addLast(sN2);
-        studentLL.addLast(sN3);
-        studentLL.addLast(sN4);
+        studentLL.addFirst(sN2);
+        System.out.println("\nAdding first: studentLL toString: " + studentLL.toString());
+
         studentLL.addLast(sN5);
         studentLL.addLast(sN6);
-        System.out.println("\nstudentLL toString: " + studentLL.toString());
+        System.out.println("\nAdding last: studentLL toString: " + studentLL.toString());
+
+        studentLL.insertMiddle(3, sN3);
+        studentLL.insertMiddle(4, sN4);
+        System.out.println("\nInsertting middle: studentLL toString: " + studentLL.toString());
+
+        studentLL.removeFirst();
+        studentLL.removeMiddle(3);
+        studentLL.removeLast();
+        System.out.println("\nRemove first, 3rd (after removing first) and last): studentLL toString: " + studentLL.toString());
 
         LinkedList enrollmentLL = new LinkedList();
         enrollmentLL.addFirst(eN1);
-        enrollmentLL.addLast(eN2);
-        enrollmentLL.addLast(eN3);
-        enrollmentLL.addLast(eN4);
+        enrollmentLL.addFirst(eN2);
+        System.out.println("\nAdding first: enrollmentLL toString: " + enrollmentLL.toString());
+
         enrollmentLL.addLast(eN5);
         enrollmentLL.addLast(eN6);
-        System.out.println("\nenrollmentLL toString: " + enrollmentLL.toString());
+        System.out.println("\nAdding last: enrollmentLL toString: " + enrollmentLL.toString());
+
+        enrollmentLL.insertMiddle(3, eN3);
+        enrollmentLL.insertMiddle(4, eN4);
+        System.out.println("\nInsertting middle: enrollmentLL toString: " + enrollmentLL.toString());
+
+        enrollmentLL.removeFirst();
+        enrollmentLL.removeMiddle(3);
+        enrollmentLL.removeLast();
+        System.out.println("\nRemove first, 3rd (after removing first) and last): enrollmentLL toString: " + enrollmentLL.toString());
 
         LinkedList courseLL = new LinkedList();
         courseLL.addFirst(cN1);
-        courseLL.addLast(cN2);
-        courseLL.addLast(cN3);
-        System.out.println("\ncourseLL toString: " + courseLL.toString());
+        courseLL.addFirst(cN2);
+        courseLL.addFirst(cN3);
+        System.out.println("\nAdding first: courseLL toString: " + courseLL.toString());
     }
 
-    public static void printList(Node node)
-    {
+    /**
+     *
+     * @param node
+     */
+    public static void printList(Node node) {
         while (node != null) {
             System.out.println(node.getValue());
             node = node.getNext();
