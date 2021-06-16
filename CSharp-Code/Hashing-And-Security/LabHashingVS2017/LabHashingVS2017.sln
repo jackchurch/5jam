@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LabHashingVS2017", "LabHashingVS2017\", "{37A35C66-F37C-41FA-820E-A7C82431C94D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52714"
+		Debug.AspNetCompiler.PhysicalPath = "LabHashingVS2017\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52714\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52714"
+		Release.AspNetCompiler.PhysicalPath = "LabHashingVS2017\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52714\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "52714"
+		SlnRelativePath = "LabHashingVS2017\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37A35C66-F37C-41FA-820E-A7C82431C94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37A35C66-F37C-41FA-820E-A7C82431C94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CA9DDF8-2D65-4438-9436-D33F1AFEE501}
+	EndGlobalSection
+EndGlobal

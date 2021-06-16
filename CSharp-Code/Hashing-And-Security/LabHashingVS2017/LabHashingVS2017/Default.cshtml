@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Home Page";
+}
+
+@{ 
+    var password = "";
+    var hashed = "";
+    var sha256 = "";
+    var sha1 = "";
+
+    var salt = "";
+
+    var hashedPassword = "";
+    var verify = false;
+
+    //IF the requst is a POST request: 
+    if (IsPost)
+    {
+        //Get password
+        password = Request.Form["password"];
+
+        //Run hasshing functions on the code: 
+        hashed = Crypto.Hash(password, "MD5");
+        sha256 = Crypto.SHA256(password);
+        sha1 = Crypto.SHA1(password);
+
+        salt = Crypto.GenerateSalt();
+
+        hashedPassword = Crypto.HashPassword(password);
+
+    }
+}
+
+<form method="post">
+    <p>Write the string as a password that would be encrypted using 
+    <span style="color: #0094ff; font-family: Consolas;">
+        Crypto</span> class of ASP.NET Web Pages.</p>
+    <input type="password" name="password" autofocus />
+    <input type="submit" value="Submit" />
+</form>
+
+<div>
+    <p>Password: @password</p>
+    <p>MDF Hashed result: @hashed</p>
+    <p>SHA256 result: @sha256</p>
+    <p>SHA1 result: @sha1</p>
+    <p>Salt: @salt</p>
+    <p>HashedPassword: @hashedPassword</p>
+    <p>Verify: @verify.ToString()</p>
+</div>
+
+<!-- OBSERVATIONAL RESULT: 
+    1. Each time a string of data is hashed using the same hashing algorithm will produce the same hased code. 
+    2. The salt method changes the salt string each time it is run. 
+    3. Adding salt to hashed code will produce a different hash code. 
+    Running the program again, becuase the hashed code doesn't change but the salt code does, the salted result will be different every time. 
+    -->
